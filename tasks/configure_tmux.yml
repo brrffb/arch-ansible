@@ -1,0 +1,11 @@
+---
+- name: check if tpm exists
+  stat:
+    path: ~/.tmux/plugins/tpm
+  register: tpm_installed
+
+- name: install tpm
+  git:
+    repo: "https://github.com/tmux-plugins/tpm"
+    dest: ~/.tmux/plugins/tpm
+  when: tpm_installed.stat.exists == False

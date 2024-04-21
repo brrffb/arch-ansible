@@ -1,0 +1,5 @@
+---
+- name: copy Xresources
+  copy:
+    src: dotfiles/.Xresources
+    dest: ~/.Xresources

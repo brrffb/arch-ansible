@@ -1,0 +1,11 @@
+add_newline = false
+scan_timeout = 10
+
+[character]
+success_symbol = "[](#abe9b3)"
+error_symbol = "[](#f28fad)"
+vicmd_symbol = "[](#ecd3a0)"
+format = "$symbol[λ ](bold #3fdaa4) "
+
+[line_break]
+disables = false

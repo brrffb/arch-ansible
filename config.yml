@@ -1,0 +1,68 @@
+---
+update: true
+
+base_packages:
+  - linux-headers
+  - base
+  - base-devel
+  - linux
+  - linux-firmware
+  - netctl
+  - networkmanager
+  - openssh
+  - vim
+  - pipewire
+  - man-db
+  - man-pages
+  - git
+  - wget
+  - reflector
+  - curl
+
+xorg_packages:
+  - xorg
+  - xorg-apps
+  - xorg-drivers
+  - xorg-apps
+  - xorg-fonts
+  - xorg-xinit
+
+font_packages:
+  - ttf-twemoji-color
+  - ttf-jetbrains-mono-nerd
+  - ttf-jetbrains-mono
+
+other_packages:
+  - yay
+  - i3-wm
+  - i3status
+  - mpv
+  - mpv-mpris
+  - librewolf
+  - zsh
+  - kitty
+  - neofetch
+  - btop
+  - tmux
+  - starship
+  - xclip
+  - fd
+  - ripgrep
+  - flameshot
+  - neovim
+  - bitwarden
+  - rofi
+  - feh
+  - python-pexpect
+  - pavucontrol
+  - webcord
+  - gtk3
+  - catppuccin-gtk-theme-mocha
+  - papirus-icon-theme
+  - gnome-themes-extra
+  - thunar
+  - gvfs
+  - pulseaudio
+  - greenclip
+  - bemoji
+  - tmux

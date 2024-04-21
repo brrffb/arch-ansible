@@ -1,0 +1,41 @@
+---
+- name: check if Pictures directory exists
+  stat:
+    path: ~/Pictures
+  register: pictures_exists
+
+- name: create Pictures directory
+  file:
+    path: ~/Pictures
+    state: directory
+  when: pictures_exists.stat.exists == False
+
+- name: copy wallpapers
+  copy:
+    src: dotfiles/Wallpapers
+    dest: ~/Pictures
+
+- name: copy dotfiles
+  copy:
+    src: dotfiles/
+    dest: ~/.config/
+
+- name: delete zshrc from .config
+  file:
+    path: ~/.config/.zshrc
+    state: absent
+
+- name: delete gtkrc from .config
+  file:
+    path: ~/.config/.gtkrc-2.0
+    state: absent
+
+- name: delete wallpapers directory from .config
+  file:
+    path: ~/.config/Wallpapers
+    state: absent
+
+- name: delete Xresources from .config
+  file:
+    path: ~/.config/.Xresources
+    state: absent

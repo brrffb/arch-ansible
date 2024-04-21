@@ -1,0 +1,14 @@
+---
+- name: install sddm
+  become: true
+  community.general.pacman:
+    name: sddm
+    state: present
+  changed_when: false
+
+- name: enable sddm service
+  become: true
+  service:
+    name: sddm
+    enabled: true
+  changed_when: false

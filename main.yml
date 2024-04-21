@@ -1,0 +1,26 @@
+---
+- name: configure system
+  hosts: all
+
+  vars_prompt:
+    - name: "user_password"
+      prompt: "Enter your password"
+      private: yes
+
+  vars_files:
+    - config.yml
+
+  tasks:
+    - import_tasks: tasks/update.yml
+    - import_tasks: tasks/base_packages.yml
+    - import_tasks: tasks/chaotic_aur.yml
+    - import_tasks: tasks/xorg.yml
+    - import_tasks: tasks/font.yml
+    - import_tasks: tasks/sddm.yml
+    - import_tasks: tasks/other_packages.yml
+    - import_tasks: tasks/configure_zsh.yml
+    - import_tasks: tasks/copy_dotfiles.yml
+    - import_tasks: tasks/upgrade.yml
+    - import_tasks: tasks/configure_gtk2.yml
+    - import_tasks: tasks/configure_xorg.yml
+    - import_tasks: tasks/configure_tmux.yml
