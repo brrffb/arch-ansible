@@ -34,8 +34,9 @@ font_packages:
 
 other_packages:
   - yay
-  - i3-wm
-  - i3status
+  # - i3-wm
+  # - i3status
+  - awesome-git
   - mpv
   - mpv-mpris
   - librewolf
@@ -46,8 +47,12 @@ other_packages:
   - tmux
   - starship
   - xclip
+
   - fd
+  - fzf
   - ripgrep
+  - zoxide
+
   - flameshot
   - neovim
   - bitwarden
@@ -55,7 +60,6 @@ other_packages:
   - feh
   - python-pexpect
   - pavucontrol
-  - webcord
   - gtk3
   - catppuccin-gtk-theme-mocha
   - papirus-icon-theme
@@ -66,3 +70,11 @@ other_packages:
   - greenclip
   - bemoji
   - tmux
+  - gimp
+
+  - libreoffice-fresh
+  - zoom
+  - steam
+  - vencord-desktop-git
+
+  - clang

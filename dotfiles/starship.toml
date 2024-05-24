@@ -2,10 +2,10 @@ add_newline = false
 scan_timeout = 10
 
 [character]
-success_symbol = "[](#abe9b3)"
-error_symbol = "[](#f28fad)"
-vicmd_symbol = "[](#ecd3a0)"
-format = "$symbol[λ ](bold #3fdaa4) "
+success_symbol = "[](#a3be8c)"
+error_symbol = "[](#bf616a)"
+vicmd_symbol = "[](#ebcb8b)"
+format = "$symbol[λ ](bold #67b0e8) "
 
 [line_break]
 disables = false
