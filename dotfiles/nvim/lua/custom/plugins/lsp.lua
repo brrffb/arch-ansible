@@ -25,6 +25,12 @@ return {
 
       local lspconfig = require "lspconfig"
 
+      local default_setup = function(server)
+        require("lspconfig")[server].setup {
+          capabilities = capabilities,
+        }
+      end
+
       local servers = {
         lua_ls = true,
         rust_analyzer = true,
@@ -67,7 +73,7 @@ return {
 
         clangd = {
           init_options = { clangdFileStatus = true },
-          filetypes = { "c" },
+          filetypes = { "c", "cpp" },
         },
       }
 
@@ -88,6 +94,13 @@ return {
 
       vim.list_extend(ensure_installed, servers_to_install)
       require("mason-tool-installer").setup { ensure_installed = ensure_installed }
+
+      -- Automatic setup of language servers
+      require("mason-lspconfig").setup {
+        handlers = {
+          default_setup,
+        },
+      }
 
       for name, config in pairs(servers) do
         if config == true then

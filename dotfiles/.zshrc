@@ -53,6 +53,7 @@ set -o AUTO_CD
 
 alias ls="ls --color"
 alias vim="nvim"
+alias -- -="cd -"
 
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
