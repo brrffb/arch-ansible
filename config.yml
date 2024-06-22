@@ -34,9 +34,8 @@ font_packages:
 
 other_packages:
   - yay
-  # - i3-wm
-  # - i3status
-  - awesome-git
+  - i3-wm
+  - i3status
   - mpv
   - mpv-mpris
   - librewolf
