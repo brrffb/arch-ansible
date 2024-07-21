@@ -39,3 +39,14 @@
   file:
     path: ~/.config/.Xresources
     state: absent
+
+- name: delete keyboard config from .config
+  file:
+    path: ~/.config/00-keyboard.conf
+    state: absent
+
+- name: copy keyboard config
+  become: true
+  copy:
+    src: dotfiles/00-keyboard.conf
+    dest: /etc/X11/xorg.conf.d/

@@ -16,8 +16,12 @@ base_packages:
   - pipewire-alsa
   - pipewire-audio
   - pipewire-pulse
+  - pipewire-jack
   - wireplumber
+  - nvidia-open
+  - nvidia-settings
   - man-db
+  - unzip
   - man-pages
   - git
   - wget
@@ -33,7 +37,9 @@ xorg_packages:
   - xorg-xinit
 
 font_packages:
-  - ttf-twemoji-color
+  - ttf-twemoji
+  - ttf-symbola
+  - noto-fonts
   - ttf-jetbrains-mono-nerd
   - ttf-jetbrains-mono
 
@@ -65,6 +71,7 @@ other_packages:
   - pavucontrol
   - gtk3
   - catppuccin-gtk-theme-mocha
+  - apple_cursor
   - papirus-icon-theme
   - gnome-themes-extra
   - thunar
