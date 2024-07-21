@@ -11,7 +11,12 @@ base_packages:
   - networkmanager
   - openssh
   - vim
+  - neovim
   - pipewire
+  - pipewire-alsa
+  - pipewire-audio
+  - pipewire-pulse
+  - wireplumber
   - man-db
   - man-pages
   - git
@@ -53,7 +58,6 @@ other_packages:
   - zoxide
 
   - flameshot
-  - neovim
   - bitwarden
   - rofi
   - feh
@@ -65,7 +69,6 @@ other_packages:
   - gnome-themes-extra
   - thunar
   - gvfs
-  - pulseaudio
   - greenclip
   - bemoji
   - tmux
@@ -74,6 +77,6 @@ other_packages:
   - libreoffice-fresh
   - zoom
   - steam
-  - vencord-desktop-git
+  - vesktop-bin
 
   - clang
