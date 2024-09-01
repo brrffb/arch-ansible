@@ -52,7 +52,7 @@ other_packages:
   - librewolf
   - zsh
   - kitty
-  - neofetch
+  - fastfetch
   - btop
   - tmux
   - starship

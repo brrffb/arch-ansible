@@ -1,0 +1,14 @@
+- name: check pacman.conf contents
+  command: cat /etc/pacman.conf
+  register: pacman_conf_output
+  changed_when: false
+
+- name: enable the multilib repository in pacman
+  become: true
+  replace:
+    path: /etc/pacman.conf
+    regexp: '#\[multilib\]\s*#Include\s*=\s*/etc/pacman\.d/mirrorlist'
+    replace: "[multilib]\nInclude = /etc/pacman.d/mirrorlist"
+  when: "'#[multilib]' in pacman_conf_output.stdout"
+  changed_when: false
+  failed_when: false

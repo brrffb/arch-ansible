@@ -14,7 +14,7 @@
   command: pacman -U "https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst" "https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst" --noconfirm
   changed_when: false
 
-- name: check pacman .conf contents
+- name: check pacman.conf contents
   command: cat /etc/pacman.conf
   register: pacman_conf_output
   changed_when: false

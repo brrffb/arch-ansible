@@ -4,7 +4,7 @@
 
   vars_prompt:
     - name: "user_password"
-      prompt: "Enter your password"
+      prompt: "enter your password"
       private: yes
 
   vars_files:
@@ -13,6 +13,7 @@
   tasks:
     - import_tasks: tasks/update.yml
     - import_tasks: tasks/base_packages.yml
+    - import_tasks: tasks/enable_multilib.yml
     - import_tasks: tasks/chaotic_aur.yml
     - import_tasks: tasks/xorg.yml
     - import_tasks: tasks/font.yml
