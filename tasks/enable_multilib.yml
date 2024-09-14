@@ -1,3 +1,4 @@
+---
 - name: check pacman.conf contents
   command: cat /etc/pacman.conf
   register: pacman_conf_output

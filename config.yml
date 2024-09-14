@@ -1,7 +1,7 @@
 ---
 update: true
 
-base_packages:
+system_packages:
   - linux-headers
   - base
   - base-devel
@@ -10,80 +10,82 @@ base_packages:
   - netctl
   - networkmanager
   - openssh
-  - vim
-  - neovim
+
   - pipewire
   - pipewire-alsa
   - pipewire-audio
   - pipewire-pulse
   - pipewire-jack
+  - pavucontrol
   - wireplumber
+
   - nvidia-open
+  - libva-nvidia-driver
+  - nvidia-utils
+  - lib32-nvidia-utils
   - nvidia-settings
+
+  - egl-wayland
+
   - man-db
   - unzip
   - man-pages
-  - git
-  - wget
   - reflector
-  - curl
-
-xorg_packages:
-  - xorg
-  - xorg-apps
-  - xorg-drivers
-  - xorg-apps
-  - xorg-fonts
-  - xorg-xinit
-
-font_packages:
-  - ttf-twemoji
-  - ttf-symbola
-  - noto-fonts
-  - ttf-jetbrains-mono-nerd
-  - ttf-jetbrains-mono
-
-other_packages:
-  - yay
-  - i3-wm
-  - i3status
   - mpv
   - mpv-mpris
-  - librewolf
-  - zsh
-  - kitty
-  - fastfetch
-  - btop
-  - tmux
-  - starship
-  - xclip
+  - git
+  - wget
+  - curl
+  - udiskie
+  - neovim
+  - yazi
+
+packages:
+  - chaotic-aur/hyprland-git
+  - cliphist
+  - fuzzel
+  - bemoji
+  - waybar
+  - xwaylandvideobridge
+  - swww
+  - dunst
+  - polkit-kde-agent
+  - qt5-wayland
+  - qt6-wayland
+  - chaotic-aur/xdg-desktop-portal-hyprland-git
+  - xdg-desktop-portal-gtk
+  - swappy
+  - nwg-look
 
   - fd
+  - tmux
   - fzf
   - ripgrep
   - zoxide
+  - zsh
+  - btop
+  - starship
+  - fastfetch
 
-  - flameshot
-  - bitwarden
-  - rofi
-  - feh
-  - python-pexpect
-  - pavucontrol
   - gtk3
   - catppuccin-gtk-theme-mocha
   - apple_cursor
   - papirus-icon-theme
   - gnome-themes-extra
-  - thunar
-  - gvfs
-  - greenclip
-  - bemoji
-  - tmux
-  - gimp
 
-  - libreoffice-fresh
-  - zoom
+# - zoom
+  - spotify
   - steam
-  - vesktop-bin
+  - chaotic-aur/vesktop-git
+  - librewolf
+  - kitty
+  - thunar
 
   - clang
+  - python-pexpect
+
+  - ttf-twemoji
+  - ttf-symbola
+  - noto-fonts
+  - ttf-jetbrains-mono-nerd
+  - ttf-jetbrains-mono

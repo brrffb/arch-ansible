@@ -1,0 +1,30 @@
+---
+- name: check mkinitcpio.conf contents
+  command: cat /etc/mkinitcpio.conf
+  register: mkinitcpio_conf_output
+  changed_when: false
+
+- name: edit the MODULES array in mkinitcpio.conf
+  become: true
+  replace:
+    path: /etc/mkinitcpio.conf
+    regexp: "{{ 'MODULES=()' | regex_escape() }}"
+    replace: "MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)"
+  when: "'MODULES=()' in mkinitcpio_conf_output.stdout"
+  changed_when: false
+  failed_when: false
+
+- name: edit /etc/modprobe.d/nvidia.conf
+  become: true
+  lineinfile:
+    path: /etc/modprobe.d/nvidia.conf
+    line: |
+      options nvidia_drm modeset=1 fbdev=1
+      options nvidia NVreg_RegistryDwords="PowerMizerEnable=0x1; PerfLevelSrc=0x2222; PowerMizerLevel=0x3; PowerMizerDefault=0x3; PowerMizerDefaultAC=0x3"
+    create: true
+  changed_when: false
+
+- name: rebuild the initramfs
+  become: true
+  command: sudo mkinitcpio -P
+  changed_when: false

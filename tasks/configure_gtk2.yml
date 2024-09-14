@@ -1,5 +1,0 @@
----
-- name: copy gtkrc
-  copy:
-    src: dotfiles/.gtkrc-2.0
-    dest: ~/.gtkrc-2.0

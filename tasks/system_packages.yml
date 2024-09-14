@@ -1,7 +1,7 @@
 ---
-- name: install base packages
+- name: install system packages
   become: true
   community.general.pacman:
-    name: "{{ base_packages }}"
+    name: "{{ system_packages }}"
     state: present
   changed_when: false

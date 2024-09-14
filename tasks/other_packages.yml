@@ -1,7 +1,6 @@
 ---
 - name: install other packages
-  # become: true
   kewlfft.aur.aur:
-    name: "{{ other_packages }}"
+    name: "{{ packages }}"
     use: yay
     state: present
