@@ -24,6 +24,8 @@ system_packages:
   - nvidia-utils
   - lib32-nvidia-utils
   - nvidia-settings
+  - v4l2loopback-dkms
+  - v4l2loopback-utils
 
   - egl-wayland
 
@@ -73,19 +75,24 @@ packages:
   - papirus-icon-theme
   - gnome-themes-extra
 
-# - zoom
+  - chaotic-aur/obs-studio-git
+
+  - zoom
+  - zathura
+  - zathura-pdf-poppler
   - spotify
   - steam
   - chaotic-aur/vesktop-git
   - librewolf
   - kitty
   - thunar
+  - telegram
+  - zed
 
   - clang
   - python-pexpect
 
   - ttf-twemoji
-  - ttf-symbola
-  - noto-fonts
   - ttf-jetbrains-mono-nerd
   - ttf-jetbrains-mono
+  - ttf-nerd-fonts-symbols

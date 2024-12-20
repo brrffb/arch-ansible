@@ -1,0 +1,91 @@
+{
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 19,
+  "ui_font_size": 16,
+
+  "relative_line_numbers": true,
+  "use_autoclose": false,
+  "use_system_path_prompts": false,
+  "extend_comment_on_newline": false,
+  "ensure_final_newline_on_save": false,
+  "auto_update": false,
+  "format_on_save": "on",
+  "current_line_highlight": "none",
+
+  "vim_mode": true,
+  "vim": {
+    "highlight_on_yank_duration": 100
+  },
+
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+
+  "theme": {
+    "mode": "dark",
+    "light": "Atelier Seaside Light",
+    "dark": "Gruvbox Dark Hard"
+  },
+
+  "tab_bar": {
+    "show": true
+  },
+
+  "scrollbar": {
+    "show": "never"
+  },
+
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "fixed"
+  },
+
+  "centered_layout": {
+    "left_padding": 0.15,
+    "right_padding": 0.15
+  },
+
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "working_directory": "current_project_directory",
+    "blinking": "on",
+    "option_as_meta": true,
+    "dock": "bottom",
+    "line_height": "standard"
+  },
+
+  "features": {
+    "inline_completion_provider": "none"
+  },
+
+  "inlay_hints": {
+    "enabled": true
+  },
+
+  "gutter": {
+    "code_actions": false,
+    "runnables": false,
+    "folds": false
+  },
+
+  "languages": {
+    "C++": {
+      "tab_size": 4,
+
+      "hard_tabs": false,
+
+      "format_on_save": "on",
+
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+
+          "arguments": [
+            "--style={BasedOnStyle: LLVM, IndentWidth: 4, TabWidth: 4}"
+          ]
+        }
+      }
+    }
+  }
+}

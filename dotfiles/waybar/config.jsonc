@@ -8,7 +8,7 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "network",
+        // "network",
         "pulseaudio",
         "clock#time",
         "clock#date",
@@ -29,11 +29,12 @@
     "clock#time": {
 		"timezone": "Europe/Helsinki",
 		"format": "{:%H:%M}",
+		"format-alt": "{:%I:%M %p}",
 		"tooltip": false
     },
     "clock#date": {
-        "format": "{:%m.%d.%Y}",
-        "format-alt": "{:%d.%m.%Y}",
+        "format": "{:%d.%m.%Y}",
+        "format-alt": "{:%A, %B %d, %Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
 		"calendar": {
 			"mode"          : "year",
@@ -90,18 +91,18 @@
 		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +10%",
 		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -10%"
     },
-    "network": {
-        "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": "⬇{bandwidthDownBytes} ⬆{bandwidthUpBytes}",
-        "interval": 3,
-        "format-linked": "{ifname} (No IP) ",
-        "format": "",
-        "format-disconnected": "",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
-        "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
-        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
-        "min-length": 17,
-        "max-length": 17
-    }
+    // "network": {
+    //     "format-wifi": " {essid} ({signalStrength}%)",
+    //     "format-ethernet": "⬇{bandwidthDownBytes} ⬆{bandwidthUpBytes}",
+    //     "interval": 3,
+    //     "format-linked": "{ifname} (No IP) ",
+    //     "format": "",
+    //     "format-disconnected": "󰖪",
+    //     "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    //     "on-click": "wl-copy $(ip address show up scope global | grep inet | head -n1 | cut -d/ -f 1 | tr -d [:space:] | cut -c5-)",
+    //     "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+    //     "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+    //     "min-length": 17,
+    //     "max-length": 17
+    // }
 }

@@ -1,0 +1,6 @@
+---
+- name: Install Graphite using make
+  become: true
+  command:
+    cmd: make install
+    chdir: "{{ playbook_dir }}/graphite"

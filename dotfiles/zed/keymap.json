@@ -1,0 +1,171 @@
+[
+  {
+    "context": "Editor || Workspace",
+    "bindings": {
+      "ctrl-shift-e": "workspace::ToggleLeftDock",
+      "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-z k": "zed::OpenKeymap",
+      "ctrl-z s": "zed::OpenSettings"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-z d": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-z z": "workspace::ToggleZoom",
+      "ctrl-z t": "terminal_panel::ToggleFocus",
+
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      "ctrl-shift-h": ["workspace::SwapPaneInDirection", "Left"],
+      "ctrl-shift-j": ["workspace::SwapPaneInDirection", "Down"],
+      "ctrl-shift-k": ["workspace::SwapPaneInDirection", "Up"],
+      "ctrl-shift-l": ["workspace::SwapPaneInDirection", "Right"],
+
+      "alt--": ["vim::ResizePane", "Widen"],
+      "alt-.": ["vim::ResizePane", "Narrow"],
+      "alt-t": ["vim::ResizePane", "Shorten"],
+      "alt-s": ["vim::ResizePane", "Lengthen"],
+
+      "ctrl-;": null,
+
+      // zen mode
+      "space c l": "workspace::ToggleCenteredLayout",
+
+      // open markdown preview
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide",
+
+      // open recent project
+      "space r p": "projects::OpenRecent",
+      // search word under cursor
+      "space s w": "pane::DeploySearch",
+
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+
+      "n": ["workspace::SendKeystrokes", "n z z"],
+      "N": ["workspace::SendKeystrokes", "shift-n z z"],
+
+      // lsp
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "ctrl-s h": "editor::ShowSignatureHelp",
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+      "d n": "editor::GoToDiagnostic",
+      "d p": "editor::GoToPrevDiagnostic",
+      // symbol search
+      "s s": "outline::Toggle",
+      "s S": "project_symbols::Toggle",
+      // diagnostic
+      "space x x": "diagnostics::Deploy",
+
+      // git
+      // git prev/next hunk
+      "space h n": "editor::GoToHunk",
+      "space h p": "editor::GoToPrevHunk",
+
+      // buffers
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+      "space c i": "pane::CloseInactiveItems",
+      "space f f": "file_finder::Toggle",
+      "space p p": "pane::DeploySearch",
+
+      "-": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      "J": "editor::MoveLineDown",
+      "K": "editor::MoveLineUp",
+
+      "space d": ["workspace::SendKeystrokes", "\" _ d"],
+      "space p": ["workspace::SendKeystrokes", "\" _ d shift-p"]
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen || vim_mode == normal",
+    "bindings": {
+      "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-o": "workspace::Open",
+      "space f f": "file_finder::Toggle",
+      "space p p": "projects::OpenRecent"
+    }
+  },
+  // comment.nvim
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "g c o": ["workspace::SendKeystrokes", "o / / space"],
+      "g c O": ["workspace::SendKeystrokes", "shift-o / / space"],
+      "g c A": ["workspace::SendKeystrokes", "shift-a space / / space"]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-z z": "workspace::ToggleZoom",
+      "ctrl-q": "pane::CloseActiveItem",
+      "alt-b": null,
+      "alt-f": null,
+      "ctrl-p": null,
+      "ctrl-n": null
+    }
+  },
+  // project panel
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste"
+      // close project panel
+      // "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      "ctrl-shift-h": ["workspace::SwapPaneInDirection", "Left"],
+      "ctrl-shift-j": ["workspace::SwapPaneInDirection", "Down"],
+      "ctrl-shift-k": ["workspace::SwapPaneInDirection", "Up"],
+      "ctrl-shift-l": ["workspace::SwapPaneInDirection", "Right"],
+
+      "alt--": ["vim::ResizePane", "Widen"],
+      "alt-.": ["vim::ResizePane", "Narrow"],
+      "alt-t": ["vim::ResizePane", "Shorten"],
+      "alt-s": ["vim::ResizePane", "Lengthen"]
+    }
+  }
+]
