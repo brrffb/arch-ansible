@@ -43,7 +43,7 @@ system_packages:
   - yazi
 
 packages:
-  - chaotic-aur/hyprland-git
+  - hyprland
   - cliphist
   - fuzzel
   - bemoji
@@ -54,7 +54,7 @@ packages:
   - polkit-kde-agent
   - qt5-wayland
   - qt6-wayland
-  - chaotic-aur/xdg-desktop-portal-hyprland-git
+  - xdg-desktop-portal-hyprland
   - xdg-desktop-portal-gtk
   - swappy
   - nwg-look
@@ -68,6 +68,7 @@ packages:
   - btop
   - starship
   - fastfetch
+  - grimblast
 
   - gtk3
   - catppuccin-gtk-theme-mocha
@@ -81,13 +82,15 @@ packages:
   - zathura
   - zathura-pdf-poppler
   - spotify
-  - steam
-  - chaotic-aur/vesktop-git
-  - librewolf
+  # - steam
+  # - chaotic-aur/vesktop-git
+  # - librewolf
+  - brave-bin
   - kitty
   - thunar
   - telegram
-  - zed
+  # - zed
+  - libreoffice-fresh
 
   - clang
   - python-pexpect
